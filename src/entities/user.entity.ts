@@ -10,5 +10,5 @@ export class User {
   @Column()
   email: string;
   @OneToMany(() => Song, (song) => song.user) // One-to-Many relation
-  song: Song[];
+  songs: Song[];
 }

@@ -1,4 +1,5 @@
 import { IsEmail, IsEnum, IsNotEmpty, IsString } from 'class-validator';
+import { SongDto } from './create-song.dto';
 
 export class CreateUserDto {
   @IsString()
@@ -8,8 +9,6 @@ export class CreateUserDto {
   @IsEmail()
   email: string;
 
-  @IsEnum(['INTERN', 'ENGINEER', 'ADMIN'], {
-    message: 'Valid role required',
-  })
-  role: 'INTERN' | 'ENGINEER' | 'ADMIN';
+  songs?: SongDto[];
+
 }

@@ -11,6 +11,6 @@ export class Song {
   @Column()
   artist: string;
 
-  @ManyToOne(() => User, (user) => user.song) // Many-to-One relation
+  @ManyToOne(() => User, (user) => user.songs) // Many-to-One relation
   user: User;
 }
